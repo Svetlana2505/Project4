@@ -35,6 +35,5 @@ export const List = styled.ul`
     margin-bottom: 10px;
     color: #66bbcc;
     cursor: pointer;
-    /* transition: all 0.1s ease-in-out; */
   }
 `;
