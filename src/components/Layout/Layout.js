@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import { Box, StyledLink } from './Layout.styled';
 
 export const Layout = () => {
@@ -6,18 +7,19 @@ export const Layout = () => {
       <p>4 проекта на React </p>
       <ul>
         <li>
-          <StyledLink to={'/dog'}>Dog</StyledLink>
+          <StyledLink to="/dog">Dog</StyledLink>
         </li>
         <li>
-          <StyledLink to={'/users'}>Users</StyledLink>
+          <StyledLink to="/users">Users</StyledLink>
         </li>
         <li>
-          <StyledLink to={'/game'}>Game</StyledLink>
+          <StyledLink to="/game">Game</StyledLink>
         </li>
         <li>
-          <StyledLink to={'/todo'}>TodoList</StyledLink>
+          <StyledLink to="/todo">TodoList</StyledLink>
         </li>
       </ul>
+      <Outlet />
     </Box>
   );
 };
