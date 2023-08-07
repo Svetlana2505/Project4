@@ -11,6 +11,7 @@ export const Box = styled.div`
     font-size: 35px;
     background-color: #2aa5a0;
     background-image: linear-gradient(90deg, #e3535d, #2aa5a0);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -24,6 +25,7 @@ export const Box = styled.div`
 
 export const StyledLink = styled(Link)`
   background-image: linear-gradient(90deg, #e3535d, #2aa5a0);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 `;
