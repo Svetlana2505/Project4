@@ -59,7 +59,6 @@ export const Item = styled.li`
   }
 
   p {
-    /* font-size: 14px; */
     color: rgba(0, 0, 0, 0.5);
   }
 `;

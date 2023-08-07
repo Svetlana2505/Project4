@@ -7,11 +7,6 @@ export const SuccessBlock = styled.div`
   text-align: center;
   padding: 30px;
   background-color: white;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* height: 100%; */
-  /* flex-direction: column; */
   animation: success-show 0.5s cubic-bezier(0.25, 0.75, 0.5, 1.25);
 `;
 

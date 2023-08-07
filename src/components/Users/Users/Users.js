@@ -16,7 +16,6 @@ export const Users = ({
 }) => {
   return (
     <Wrapper>
-      {/* <Container> */}
       <StyleInput>
         <BsSearch />
         <input
@@ -46,7 +45,6 @@ export const Users = ({
         <Button onClick={success}>Отправить приглашение</Button>
       )}
 
-      {/* </Container> */}
       <StyledLink to="/">
         <AiFillStepBackward /> back
       </StyledLink>
