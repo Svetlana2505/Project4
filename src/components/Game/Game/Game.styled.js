@@ -9,6 +9,8 @@ export const Progress = styled.div`
 
 export const Text = styled.h1`
   color: #66bbcc;
+  font-size: 28px;
+  margin-bottom: 10px;
 `;
 
 export const ProgressInner = styled.div`

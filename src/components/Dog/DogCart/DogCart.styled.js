@@ -1,17 +1,30 @@
 import styled from 'styled-components';
 
 export const Box = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 450px;
   margin: auto;
   margin-top: 30px;
 
-  div {
-    margin-left: 10px;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
   }
+`;
+
+export const WrapperText = styled.div`
+  margin-top: 15px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-left: 15px;
+  }
+
   p {
+    font-size: 20px;
+    font-weight: 500;
     color: grey;
-    margin-bottom: 10px;
+
+    :not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 `;

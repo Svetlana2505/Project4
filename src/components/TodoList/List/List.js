@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { TodoForm } from '../TodoForm/TodoForm';
 import { Todo } from '../Todo/Todo';
 import { Wrapper } from './List.styled';
+import { Container } from 'components/Container';
 
 export const List = () => {
   const [tasks, setTasks] = useState([]);
@@ -32,21 +33,23 @@ export const List = () => {
   };
 
   return (
-    <Wrapper>
-      <StyledLink to="/">
-        <AiFillStepBackward /> back
-      </StyledLink>
-      <h1>Какой план на сегодня?</h1>
-      <h2>Список задач: {tasks.length}</h2>
-      <TodoForm addTask={addTask} />
-      {tasks.map(task => (
-        <Todo
-          key={task.id}
-          task={task}
-          deleteTask={deleteTask}
-          toggle={toggle}
-        />
-      ))}
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        <StyledLink to="/">
+          <AiFillStepBackward /> back
+        </StyledLink>
+        <h1>Какой план на сегодня?</h1>
+        <h2>Список задач: {tasks.length}</h2>
+        <TodoForm addTask={addTask} />
+        {tasks.map(task => (
+          <Todo
+            key={task.id}
+            task={task}
+            deleteTask={deleteTask}
+            toggle={toggle}
+          />
+        ))}
+      </Wrapper>
+    </Container>
   );
 };

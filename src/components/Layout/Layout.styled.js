@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Box = styled.div`
-  margin: 50px;
+  margin-top: 50px;
   text-align: center;
   font-weight: 900;
   font-size: 25px;

@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Box = styled.div`
-  width: 600px;
-  margin: auto;
   padding-top: 50px;
 `;
 

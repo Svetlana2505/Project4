@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { Game } from './Game/Game';
 import { Result } from './Result/Result';
 
-import { Wrapper } from './Result/Result.styled';
+import { Wrapper } from './Wrapper';
+import { Container } from 'components/Container';
 
 const questions = [
   {
@@ -47,20 +48,23 @@ export const AppGame = () => {
     }
   };
   return (
-    <Wrapper style={{ background: '#E5E3E4' }}>
-      <StyledLink to="/">
-        <AiFillStepBackward /> back
-      </StyledLink>
-      {step !== questions.length ? (
-        <Game
-          question={question}
-          onClickVariant={onClickVariant}
-          step={step}
-          questions={questions}
-        />
-      ) : (
-        <Result correct={correct} questions={questions} />
-      )}
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        <StyledLink to="/">
+          <AiFillStepBackward /> back
+        </StyledLink>
+
+        {step !== questions.length ? (
+          <Game
+            question={question}
+            onClickVariant={onClickVariant}
+            step={step}
+            questions={questions}
+          />
+        ) : (
+          <Result correct={correct} questions={questions} />
+        )}
+      </Wrapper>
+    </Container>
   );
 };

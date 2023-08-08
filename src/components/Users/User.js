@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Users } from './Users/Users';
 import { useEffect, useState } from 'react';
 import { Success } from './Success/Success';
+import { Container } from 'components/Container';
 
 const ERROR = 'Что-то пошло не так';
 
@@ -39,20 +40,22 @@ export const User = () => {
 
   return (
     <div>
-      {isLoading && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {success ? (
-        <Success count={invites.length} />
-      ) : (
-        <Users
-          users={users}
-          searchValue={searchValue}
-          onChangeSearchValue={e => setSearchValue(e.target.value)}
-          invites={invites}
-          onChangeInvites={onChangeInvites}
-          success={() => setSuccess(true)}
-        />
-      )}
+      <Container>
+        {isLoading && <div>Loading...</div>}
+        {error && <div>{error}</div>}
+        {success ? (
+          <Success count={invites.length} />
+        ) : (
+          <Users
+            users={users}
+            searchValue={searchValue}
+            onChangeSearchValue={e => setSearchValue(e.target.value)}
+            invites={invites}
+            onChangeInvites={onChangeInvites}
+            success={() => setSuccess(true)}
+          />
+        )}
+      </Container>
     </div>
   );
 };

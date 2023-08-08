@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom';
 import { StyledResul } from './Result.styled';
+import { useLocation } from 'react-router-dom';
 
 export const Result = ({ correct, questions }) => {
+  const location = useLocation();
   return (
     <StyledResul>
       <img
@@ -10,9 +13,9 @@ export const Result = ({ correct, questions }) => {
       <h2>
         Вы отгадали {correct} ответа из {questions.length}
       </h2>
-      <a href="/game">
+      <Link to={location?.state?.from}>
         <button>Попробовать снова</button>
-      </a>
+      </Link>
     </StyledResul>
   );
 };

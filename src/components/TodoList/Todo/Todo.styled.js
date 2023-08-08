@@ -5,14 +5,11 @@ export const WrapperTask = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  width: 100%;
+  width: 310px;
+  margin: 0 auto;
   height: 35px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
-    1px 2px 4px 0px rgba(0, 255, 255, 0.7),
-    2px 4px 8px 0px rgba(0, 255, 255, 0.7),
-    2px 4px 16px 0px rgba(0, 255, 255, 0.7);
 
   &:not(:last-child) {
     margin-bottom: 15px;

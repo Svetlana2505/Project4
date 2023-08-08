@@ -3,10 +3,13 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
   border-radius: 35px;
   margin: 100px auto;
   background-color: beige;
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
 `;
 
 export const StyleInput = styled.div`
@@ -30,7 +33,7 @@ export const StyleInput = styled.div`
     height: 18px;
     position: absolute;
     top: 30px;
-    left: 75px;
+    left: 40px;
     opacity: 0.3;
   }
 `;

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const SuccessBlock = styled.div`
-  width: 400px;
   border-radius: 20px;
   margin: 50px auto;
   text-align: center;
   padding: 30px;
   background-color: white;
   animation: success-show 0.5s cubic-bezier(0.25, 0.75, 0.5, 1.25);
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
 `;
 
 export const Image = styled.img`

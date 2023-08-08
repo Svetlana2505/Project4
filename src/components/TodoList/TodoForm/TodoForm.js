@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyledForm } from './TodoForm.styled';
+import { StyledForm, StyledInput, StyledButton } from './TodoForm.styled';
 
 export const TodoForm = ({ addTask }) => {
   const [value, setValue] = useState('');
@@ -20,12 +20,12 @@ export const TodoForm = ({ addTask }) => {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <input
+      <StyledInput
         value={value}
         onChange={e => setValue(e.target.value)}
         onKeyDown={handlePress}
       />
-      <button>Добавить</button>
+      <StyledButton>Добавить</StyledButton>
     </StyledForm>
   );
 };

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { fetchDogId } from './api';
 import { DogCart } from './DogCart/DogCart';
 import { Box } from './Select/Select.styled';
+import { Container } from 'components/Container';
 
 const ERROR = 'Что-то пошло не так';
 const LOADING = 'загрузка';
@@ -27,10 +28,12 @@ export const Dog = () => {
 
   return (
     <Box>
-      <SelectCart fetchDog={fetchDog} />
-      {isLoading && <h1>{LOADING}</h1>}
-      {error && <div>{error}</div>}
-      {dog && !isLoading && <DogCart dog={dog} />}
+      <Container>
+        <SelectCart fetchDog={fetchDog} />
+        {isLoading && <h1>{LOADING}</h1>}
+        {error && <div>{error}</div>}
+        {dog && !isLoading && <DogCart dog={dog} />}
+      </Container>
     </Box>
   );
 };

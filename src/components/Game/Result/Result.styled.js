@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  width: 500px;
-  margin: 50px auto;
-  border-radius: 30px;
-  padding: 40px;
-  background-color: #fff;
-  position: relative;
-`;
-
 export const StyledResul = styled.div`
   text-align: center;
 
