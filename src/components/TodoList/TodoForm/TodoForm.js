@@ -12,7 +12,6 @@ export const TodoForm = ({ addTask }) => {
   };
 
   const handlePress = e => {
-    console.log(e);
     if (e === 'Enter') {
       setValue(e);
     }
